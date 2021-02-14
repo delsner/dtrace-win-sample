@@ -12,7 +12,7 @@ BEGIN
 syscall:::entry
 /(trackedpid[ppid] == -1) && (trackedpid[pid] == 0)/
 {
-	trackedpid[pid] = -1;
+    trackedpid[pid] = -1;
     trackedexecname[pid] = execname;
     printf("%d %s_%d spanwed process %s_%d \n", walltimestamp, trackedexecname[ppid], ppid, execname, pid);
 }
