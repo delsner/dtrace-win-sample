@@ -3,8 +3,8 @@ struct ustr{uint16_t buffer[256];};
 BEGIN
 {
     /* -1: trace this process; 0: do not trace process; */
-    trackedpid[pid] = 0;  // do not trace `dtrace` pid.
-    trackedpid[$target] = -1;  // call with -c or -p to allow using `$target` here.
+    trackedpid[pid] = 0;  /* do not trace `dtrace` pid. */
+    trackedpid[$target] = -1;  /* call with -c or -p to allow using `$target` here. */
     printf("Dtrace started.\n");
 }
 
